@@ -1,0 +1,201 @@
+.card:hover {
+    box-shadow: 0px 4px 10px rgba(193, 10, 10, 0.2);
+    transform: scale(1.03);
+    transition: all 0.3s linear;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.container h2 {
+    margin-bottom: 3rem;
+}
+
+.navbar {
+    background: #DA4453;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89216B, #DA4453);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 70px;
+    max-height:fit-content;
+    position: sticky;
+    top: 0;
+
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1030;
+}
+
+.footer {
+    background: #DA4453;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89216B, #DA4453);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    font-size: 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    white-space: wrap;
+}
+
+.tooltip-container:hover .tooltip-text {
+    opacity: 0.6;
+    visibility: visible;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: calc(80vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+                url('/photos/travel-nature.jpg') no-repeat center center/cover;
+    animation: heroBackground 12s infinite linear;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Darker overlay */
+    backdrop-filter: blur(2px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Button Styling */
+.explore-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    color: white;
+    border: none;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 12px rgba(255, 65, 108, 0.3);
+}
+
+.explore-btn:hover {
+    background: white;
+    color: #FF416C;
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(255, 65, 108, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroBackground {
+    0% { 
+        background-image: url('/photos/travel-mountain.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    50% { 
+        background-image: url('/photos/beach-holiday.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    100% { 
+        background-image: url('/photos/city-advanture.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+}
+

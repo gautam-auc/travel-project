@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">BEYOND THE WORLD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destination-list">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search destinations..."
+                        aria-label="Search" onkeypress="filterDestinations()">
+                    <button class="btn btn-outline-light" type="button" onclick="filterDestinations()">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content text-center">
+            <h1>Explore the Beauty of the World</h1>
+            <p>Plan your perfect getaway with the best destinations and experiences.</p>
+            <a href="#dest-list" class="btn btn-light btn-lg explore-btn">Discover More</a>
+        </div>
+    </div>
+      
+
+    <div class="container mt-4" id="dest-list">
+        <h2 class="text-center">Popular Destinations</h2>
+        <div class="row" id="destination-list"></div>
+    </div>
+
+    <div class="container mt-5 text-center" id="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <p>We offer the best travel deals, secure Hotel bookings, and a variety of destinations tailored to your needs
+            with cab services.</p>
+    </div>
+
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Book Your Trip</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Destination</label>
+                            <input type="text" class="form-control" id="selectedDestination" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Hotel Booking</label>
+                            <input type="text" class="form-control" id="selectedCab" readonly>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025__ Beyond The World. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="#" class="text-white">Facebook</a> |
+                <a href="#" class="text-white">Instagram</a> |
+                <a href="#" class="text-white">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const destinations = [
+            { name: "Agra", price: "10000/-", img: "/photos/agra.jpg", title: "" },
+            { name: "Amritsar", price: "15000/-", img: "/photos/amritsar.jpg", title: "" },
+            { name: "Tirupati", price: "25000/-", img: "/photos/tirupatibalaji.jpg", title: "" },
+            { name: "Ayodhya", price: "30000/-", img: "/photos/ayodhya-tourism.webp", title: "" },
+            { name: "Ajmer", price: "25000/-", img: "/photos/ajmer-930x620.jpeg", title: "" },
+            { name: "goa", price: "25000/-", img: "/photos/goa.jpg", title: "" },
+            { name: "goa", price: "25000/-", img: "/photos/manali.jpg", title: "" },
+            { name: "Daman And Diu", price: "₹10,359 - ₹56,735", img: "/photos/damanndiu.jpg", title: "A 5-day tour of Meghalaya can include visits to Elephant Falls, Cherrapunjee, Dawki River, and Mawlynnong" },
+            { name: "Darjeeling", price: "₹36,440 - ₹55,144 ", img: "/photos/Lava-Monastery darjeeling.jpg", title: "" },
+            { name: "Mysore", price: "₹11,500 for a 2-night, 3-day trip", img: "/photos/MysorePalace1.jpg", title: "" },
+            { name: "Meghalaya", price: "₹34,999 - ₹56,268", img: "/photos/Meghalaya_4.jpg", title: "A 5-day tour of Meghalaya can include visits to Elephant Falls, Cherrapunjee, Dawki River, and Mawlynnong" },
+            { name: "goa", price: "25000/-", img: "/photos/goa.jpg", title: "" },
+        ];
+
+        const destinationList = document.getElementById("destination-list");
+        destinations.forEach(dest => {
+            const card = document.createElement("div");
+            card.className = "col-md-4 mb-4";
+            card.innerHTML = `
+                <div class="card">
+                    <div class="tooltip-container">
+                        <img src="${dest.img}" class="card-img-top" alt="${dest.name}">
+                        <span class="tooltip-text">${dest.title}</span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">${dest.name}</h5>
+                        <p class="card-text">Price: ${dest.price}</p>
+                        <button class="btn btn-primary" onclick="bookTrip('${dest.name}')">Book Now</button>
+                    </div>
+                </div>
+            `;
+            destinationList.appendChild(card);
+        });
+
+        function bookTrip(destination) {
+            document.getElementById("selectedDestination").value = destination;
+            new bootstrap.Modal(document.getElementById("bookingModal")).show();
+        }
+
+
+        function filterDestinations() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let cards = document.querySelectorAll("#destination-list .col-md-4");
+
+            let hasResults = false;
+            cards.forEach(card => {
+                let title = card.querySelector(".card-title").textContent.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = "block";
+                    hasResults = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Show 'No Results' message if no destinations match
+            let noResults = document.getElementById("noResultsMessage");
+            if (!hasResults) {
+                if (!noResults) {
+                    noResults = document.createElement("div");
+                    noResults.id = "noResultsMessage";
+                    noResults.className = "text-center text-danger mt-3";
+                    noResults.innerHTML = "<h5>No destinations found</h5>";
+                    document.getElementById("destination-list").appendChild(noResults);
+                }
+            } else {
+                if (noResults) {
+                    noResults.remove();
+                }
+            }
+        }        
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
