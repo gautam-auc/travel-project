@@ -46,91 +46,6 @@ body {
     top: 0;
     z-index: 1030;
 }
-
-.card:hover {
-    box-shadow: 0px 4px 10px rgba(193, 10, 10, 0.2);
-    transform: scale(1.03);
-    transition: all 0.3s linear;
-}
-
-.card img {
-    height: 200px;
-    object-fit: cover;
-}
-
-
-
-
-.destination {
-    padding: 80px 0;
-}
-
-.destination-title {
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.destination-title span {
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-/* .navbar-logo {
-    .navbar-logo {
-        height: 50px;
-        /* Adjust as needed */
-/* width: auto;
-        margin-right: 10px;
-        vertical-align: middle; */
-/* } */
-
-/* } */
-
-.footer {
-    background: url('https://www.transparenttextures.com/patterns/black-paper.png');
-    background-color: #2C3E50;
-    /* Dark blue-grey for fallback */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    /* margin-top: 50px; */
-}
-
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip-text {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    color: black;
-    font-weight: 500;
-    text-align: center;
-    font-size: 50px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-    white-space: wrap;
-}
-
-.tooltip-container:hover .tooltip-text {
-    opacity: 0.6;
-    visibility: visible;
-}
-
 /* Hero Section */
 .hero {
     position: relative;
@@ -185,7 +100,6 @@ body {
     opacity: 0.9;
     animation: fadeIn 2s ease-in-out;
 }
-
 /* Button Styling */
 .explore-btn {
     padding: 12px 30px;
@@ -206,6 +120,80 @@ body {
     box-shadow: 0 6px 15px rgba(255, 65, 108, 0.4);
 }
 
+/*card styling */
+.card:hover {
+    box-shadow: 0px 4px 10px rgba(193, 10, 10, 0.2);
+    transform: scale(1.03);
+    transition: all 0.3s linear;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+.destination {
+    padding: 80px 0;
+}
+
+.destination-title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.destination-title span {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* .navbar-logo {
+    .navbar-logo {
+        height: 50px;
+        /* Adjust as needed */
+/* width: auto;
+        margin-right: 10px;
+        vertical-align: middle; */
+/* } */
+
+/* } */
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    font-size: 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    white-space: wrap;
+}
+
+.tooltip-container:hover .tooltip-text {
+    opacity: 0.6;
+    visibility: visible;
+}
 
 /* Animations */
 @keyframes fadeIn {
@@ -314,20 +302,21 @@ body {
 }
 
 .icon {
-    width: 70px;
+    width: 72px;
     height: 70px;
     background: rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin: 0 auto 15px;
+    margin: 0 auto;
     transition: all 0.3s ease-in-out;
 }
 
 .icon img {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .why-us-card:hover .icon {
@@ -486,4 +475,14 @@ body {
     .section-title {
         font-size: 2.4rem;
     }
+}
+/* footer styling*/
+.footer {
+    background: url('https://www.transparenttextures.com/patterns/black-paper.png');
+    background-color: #2C3E50;
+    /* Dark blue-grey for fallback */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    /* margin-top: 50px; */
 }
