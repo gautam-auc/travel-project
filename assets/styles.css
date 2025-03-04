@@ -1,36 +1,34 @@
-.card:hover {
-    box-shadow: 0px 4px 10px rgba(193, 10, 10, 0.2);
-    transform: scale(1.03);
-    transition: all 0.3s linear;
+body {
+    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fddb92);
+    padding-top: 70px;
+
 }
 
-.card img {
-    height: 200px;
-    object-fit: cover;
-}
-
-.container h2 {
-    margin-bottom: 3rem;
-}
 
 .navbar {
-    background: #DA4453;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89216B, #DA4453);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url('https://www.transparenttextures.com/patterns/black-paper.png');
+    background-color: #2C3E50;
+    /* Dark blue-grey for fallback */
+    color: white;
     min-height: 70px;
-    max-height:fit-content;
+    max-height: fit-content;
     position: sticky;
     top: 0;
-
+    padding: 0px;
 }
 
 .navbar-brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white !important;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand img {
+    height: 5rem;
+    width: 5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 1rem;
+
 }
 
 .nav-link {
@@ -49,22 +47,59 @@
     z-index: 1030;
 }
 
-.footer {
-    background: #DA4453;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89216B, #DA4453);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89216B, #DA4453);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.card:hover {
+    box-shadow: 0px 4px 10px rgba(193, 10, 10, 0.2);
+    transform: scale(1.03);
+    transition: all 0.3s linear;
+}
 
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+.destination {
+    padding: 80px 0;
+}
+
+.destination-title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.destination-title span {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* .navbar-logo {
+    .navbar-logo {
+        height: 50px;
+        /* Adjust as needed */
+/* width: auto;
+        margin-right: 10px;
+        vertical-align: middle; */
+/* } */
+
+/* } */
+
+.footer {
+    background: url('https://www.transparenttextures.com/patterns/black-paper.png');
+    background-color: #2C3E50;
+    /* Dark blue-grey for fallback */
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: 50px;
-}
-
-body {
-    padding-top: 70px;
+    /* margin-top: 50px; */
 }
 
 .tooltip-container {
@@ -104,11 +139,11 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 2rem;
     font-weight: bold;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-                url('/photos/travel-nature.jpg') no-repeat center center/cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url('/photos/travel-nature.jpg') no-repeat center center/cover;
     animation: heroBackground 12s infinite linear;
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 }
@@ -120,8 +155,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Darker overlay */
-    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.2);
+    /* Darker overlay */
+    backdrop-filter: blur(1px);
 }
 
 .hero-content {
@@ -170,32 +206,284 @@ body {
     box-shadow: 0 6px 15px rgba(255, 65, 108, 0.4);
 }
 
+
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInDown {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes heroBackground {
-    0% { 
-        background-image: url('/photos/travel-mountain.jpg');
+    0% {
+        background-image: url('/photos/goa blur.jpg');
         background-position: center center;
         background-size: cover;
     }
-    50% { 
-        background-image: url('/photos/beach-holiday.jpg');
+
+    50% {
+        background-image: url('/photos/HD-wallpaper-jaipur-rajasthan.jpg');
         background-position: center center;
         background-size: cover;
     }
-    100% { 
-        background-image: url('/photos/city-advanture.jpg');
+
+    100% {
+        background-image: url('/photos/megh blur.jpg');
         background-position: center center;
         background-size: cover;
     }
 }
 
+/* Why Us Section */
+.why-us {
+    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fddb92);
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.section-title span {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Grid Layout */
+.why-us-grid {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+/* Why Us Cards */
+.why-us-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    width: 40%;
+}
+
+.why-us-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.why-us-card:hover .icon {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.why-us-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.why-us-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .why-us-grid {
+        flex-direction: column;
+    }
+
+    .section-title {
+        font-size: 2.4rem;
+    }
+
+    .why-us-card {
+        width: 100%;
+    }
+}
+
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fddb92);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: #ff416c;
+    transform: scale(1.05);
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: left;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #ff416c;
+}
+
+/* Map */
+.map {
+    margin-top: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2.4rem;
+    }
+}

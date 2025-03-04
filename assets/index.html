@@ -4,23 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Booking</title>
+    <title>Royal India Trails</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">BEYOND THE WORLD</a>
+            <a href="#" class="navbar-brand"><img src="/photos/travel-bnd.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#destination-list">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destination">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -35,23 +40,120 @@
 
     <div class="hero">
         <div class="hero-content text-center">
-            <h1>Explore the Beauty of the World</h1>
+            <h1>Explore the Beauty of the India</h1>
             <p>Plan your perfect getaway with the best destinations and experiences.</p>
             <a href="#dest-list" class="btn btn-light btn-lg explore-btn">Discover More</a>
         </div>
     </div>
-      
 
-    <div class="container mt-4" id="dest-list">
-        <h2 class="text-center">Popular Destinations</h2>
-        <div class="row" id="destination-list"></div>
-    </div>
+    <section class="destination" id="destination">
+        <div class="container">
+            <h2 class="destination-title">Popular <span>Destinations</span></h2>
+            <div class="row" id="destination-list"></div>
+        </div>
+    </section>
+    
 
-    <div class="container mt-5 text-center" id="why-choose-us">
-        <h2>Why Choose Us?</h2>
-        <p>We offer the best travel deals, secure Hotel bookings, and a variety of destinations tailored to your needs
-            with cab services.</p>
-    </div>
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose <span>Royal India Trails?</span></h2>
+            <p class="section-subtitle">Experience India like never before with our expert-curated journeys.</p>
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="icon"><img src="icons/authentic.png" alt="Authentic Experiences"></div>
+                    <h3>Authentic Experiences</h3>
+                    <p>Discover India's rich culture, heritage, and traditions through exclusive, local experiences.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="icon"><img src="icons/customized.png" alt="Customized Tours"></div>
+                    <h3>Tailor-Made Itineraries</h3>
+                    <p>We craft personalized travel plans to suit your preferences, style, and budget.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="icon"><img src="icons/expert.png" alt="Expert Guidance"></div>
+                    <h3>Expert Guides</h3>
+                    <p>Travel with seasoned professionals who bring every destination to life with deep insights.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="icon"><img src="icons/luxury.png" alt="Luxury & Comfort"></div>
+                    <h3>Luxury & Comfort</h3>
+                    <p>Enjoy handpicked accommodations, seamless transport, and VIP access for a stress-free journey.
+                    </p>
+                </div>
+                <div class="why-us-card">
+                    <div class="icon"><img src="icons/support.png" alt="24/7 Support"></div>
+                    <h3>24/7 Assistance</h3>
+                    <p>Our support team is always available to ensure a hassle-free and enjoyable trip.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="icon"><img src="icons/safety.png" alt="Safety & Security"></div>
+                    <h3>Safety & Security</h3>
+                    <p>We prioritize your safety with verified stays, secure transport, and trusted local guides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in <span>Touch</span></h2>
+            <p class="section-subtitle">We'd love to hear from you! Reach out for bookings, inquiries, or travel advice.
+            </p>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Raipur, India</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+91 98765 43210</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact@royalindiatrails.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map for Raipur, India -->
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3708.2650096171043!2d81.62964167459414!3d21.251384680467798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde12a8a7e89%3A0x9543a33e9f9431a6!2sRaipur%2C%20Chhattisgarh%2C%20India!5e0!3m2!1sen!2sin!4v1709387390805"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
 
     <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -87,7 +189,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025__ Beyond The World. All rights reserved.</p>
+            <p>&copy; 2025__ Royal India Trails. All rights reserved.</p>
             <p>Follow us on:
                 <a href="#" class="text-white">Facebook</a> |
                 <a href="#" class="text-white">Instagram</a> |
@@ -98,18 +200,18 @@
 
     <script>
         const destinations = [
-            { name: "Agra", price: "10000/-", img: "/photos/agra.jpg", title: "" },
-            { name: "Amritsar", price: "15000/-", img: "/photos/amritsar.jpg", title: "" },
-            { name: "Tirupati", price: "25000/-", img: "/photos/tirupatibalaji.jpg", title: "" },
-            { name: "Ayodhya", price: "30000/-", img: "/photos/ayodhya-tourism.webp", title: "" },
-            { name: "Ajmer", price: "25000/-", img: "/photos/ajmer-930x620.jpeg", title: "" },
-            { name: "goa", price: "25000/-", img: "/photos/goa.jpg", title: "" },
-            { name: "goa", price: "25000/-", img: "/photos/manali.jpg", title: "" },
-            { name: "Daman And Diu", price: "₹10,359 - ₹56,735", img: "/photos/damanndiu.jpg", title: "A 5-day tour of Meghalaya can include visits to Elephant Falls, Cherrapunjee, Dawki River, and Mawlynnong" },
-            { name: "Darjeeling", price: "₹36,440 - ₹55,144 ", img: "/photos/Lava-Monastery darjeeling.jpg", title: "" },
-            { name: "Mysore", price: "₹11,500 for a 2-night, 3-day trip", img: "/photos/MysorePalace1.jpg", title: "" },
+            { name: "Agra", price: "₹3,000 - ₹5,000", img: "/photos/agra.jpg", title: "includes visits to the Taj Mahal, Agra Fort, and other key sights, can typically cost around ₹3,000 - ₹5,000 for a single visitor, depends on transport, guide fees." },
+            { name: "Amritsar", price: "₹5,000 - ₹100,000", img: "/photos/amritsar.jpg", title: "A 5-day trip to Amritsar and Vaishno Devi can cost around ₹30,173." },
+            { name: "Tirupati", price: "₹13,250", img: "/photos/tirupatibalaji.jpg", title: "A trip to Tirupati, India can cost at least ₹13,250, depending on the tour package and what it includes." },
+            { name: "Ayodhya", price: "₹11,411 - ₹28,390", img: "/photos/ayodhya-tourism.webp", title: "Ayodhya Packages: Tour To Varanasi, Prayagraj & Ayodhya: ₹28,390 per person" },
+            { name: "Ajmer", price: "₹2,500 - ₹15,000", img: "/photos/ajmer-930x620.jpeg", title: "The cost of an Ajmer tour package depends on the inclusions and luxury of the package." },
+            { name: "Goa", price: "₹25,000 - ₹30,000", img: "/photos/goa.jpg", title: "A 7-day trip to Goa can cost between ₹25,000 and ₹30,000 per person. This includes food, lodging, activities, sightseeing, and local travel." },
+            { name: "Manali", price: "₹8,500 - ₹25000/-", img: "/photos/manali.jpg", title: "The activities you plan, the type of accommodation you choose. A 3-day trip can cost between ₹8,500 and ₹24,000." },
+            { name: "Daman And Diu", price: "₹10,359 - ₹56,735", img: "/photos/damanndiu.jpg", title: "A 2-night, 3-day weekend getaway to Daman and Diu can cost around ₹13,699" },
+            { name: "Darjeeling", price: "₹36,440 - ₹55,144 ", img: "/photos/Lava-Monastery darjeeling.jpg", title: "A comfortable stay in Darjeeling is around 2 to 3 days. A 2-day trip to Darjeeling can cost between Rs 3,000 and Rs 5,000 per person" },
+            { name: "Mysore", price: "₹11,500 - ₹40,000", img: "/photos/MysorePalace1.jpg", title: "A 6-night, 7-day tour package to Mysore, Coorg, Bangalore, and Ooty costs around ₹34,800" },
             { name: "Meghalaya", price: "₹34,999 - ₹56,268", img: "/photos/Meghalaya_4.jpg", title: "A 5-day tour of Meghalaya can include visits to Elephant Falls, Cherrapunjee, Dawki River, and Mawlynnong" },
-            { name: "goa", price: "25000/-", img: "/photos/goa.jpg", title: "" },
+            { name: "The Andaman Islands", price: " ₹46,000 - ₹82,000.", img: "/photos/Andaman-islands.jpg", title: "The tour cost include 4-day, 5-night, and 6-night packages and the number of days you spend in the Andaman Islands will affect the cost of your tour." },
         ];
 
         const destinationList = document.getElementById("destination-list");
